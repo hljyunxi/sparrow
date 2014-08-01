@@ -111,6 +111,7 @@ local function filehandler (req, res, baseDir)
 
         local path = baseDir .."/".. req.relpath
 
+
         res.headers ["Content-Type"] = mimefrompath (path)
         res.headers ["Content-Encoding"] = encodingfrompath (path)
 

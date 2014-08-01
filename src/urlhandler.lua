@@ -29,6 +29,7 @@ local function match_url (req, conf)
                         break
                 end
         end
+        
 
         if req.match then
                 local _,_,pfx = string.find (req.match, "^(.*/)[^/]-$")

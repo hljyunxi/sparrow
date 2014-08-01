@@ -9,6 +9,7 @@
 ------------------------------------------------------------------------------
 
 local sparrow = require "sparrow.httpd"
+local copas = require "sparrow.copas"
 
 local hvhost = require "sparrow.vhostshandler"
 local hurl = require "sparrow.urlhandler"
@@ -16,12 +17,14 @@ local hindex = require "sparrow.indexhandler"
 local hfile = require "sparrow.filehandler"
 
 
-local SPARROW_WEB = "./hotdocs"
+local SPARROW_WEB = "./htdocs"
 sparrow.handle_request = hvhost {
 	[""] = hurl {
-		["/"] = hindex ("/cgi/index.lp"),
-		["/img/"] = hfile (SPARROW_WEB.."/img"),
+		["/"] = hindex (SPARROW_WEB),
+		["/img/"] = hfile (SPARROW_WEB),
 	}
 }
 
 sparrow.register ("*", 8080, "sparrow 1.0")
+
+copas.loop()

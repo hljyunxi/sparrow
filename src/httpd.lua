@@ -138,7 +138,6 @@ end
 
 function _M.parse_url (req)
         local def_url = string.format ("http://%s%s", req.headers.host or "", req.cmd_url or "")
-
         req.parsed_url = url.parse (def_url or '')
         req.parsed_url.port = req.parsed_url.port or req.port
         req.built_url = url.build (req.parsed_url)
