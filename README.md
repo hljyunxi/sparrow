@@ -1,4 +1,4 @@
-lua-web
+sparrow
 =======
 
-lua web framework
+lua web server
