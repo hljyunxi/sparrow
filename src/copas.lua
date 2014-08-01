@@ -19,7 +19,7 @@ end
 
 local socket = require "socket"
 local gettime = socket.gettime
-local coxpcall = require "coxpcall"
+local coxpcall = require "sparrow.coxpcall"
 
 local WATCH_DOG_TIMEOUT = 120
 local UDP_DATAGRAM_MAX = 8192

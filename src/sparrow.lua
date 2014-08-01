@@ -14,7 +14,7 @@
 
 local _M = {}
 
-local copas = require "copas"
+local copas = require "sparrow.copas"
 local httpd = require "sparrow.httpd"
 local string = require "string"
 local phandler = require "sparrow.patternhandler"

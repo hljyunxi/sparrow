@@ -14,7 +14,7 @@ local io = require "io"
 
 local socket = require "socket"
 local url = require "socket.url"
-local copas = require "copas"
+local copas = require "sparrow.copas"
 
 local _M = {}
 
